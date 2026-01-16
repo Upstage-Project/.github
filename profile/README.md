@@ -9,7 +9,7 @@
 
 | 이름 | 역할 | GitHub |
 |------|------|--------|
-| **[김남호]** | AI Agent Logic (LangGraph) | [@namho](https://github.com/namho1029) |
+| **[김남호]** | AI Agent Logic (LangGraph) | [namho](https://github.com/namho1029) |
 | **[신재호]** | AI Agent Logic (LangGraph) | [sjho0210](https://github.com/sjho0210) |
 | **[안동우]** | Frontend, UI/UX Design| [DongwooAn00](https://github.com/DongwooAn00) |
 | **[장성우]** | Backend, Docker | [woo1016](https://github.com/woo1016) |
