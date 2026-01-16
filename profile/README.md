@@ -80,3 +80,4 @@ FinMate - Upstage_Project/
 ## 아키텍처
 
 저희 서비스는 `Orchestrator`를 중심으로 한 **Multi-Agent** 구조로 설계되었습니다.
+<img width="1454" height="834" alt="Image" src="https://github.com/user-attachments/assets/969ca038-f266-42bc-8869-b1808b369ff5" />
