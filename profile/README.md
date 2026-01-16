@@ -81,3 +81,70 @@ FinMate - Upstage_Project/
 
 저희 서비스는 `Orchestrator`를 중심으로 한 **Multi-Agent** 구조로 설계되었습니다.
 <img width="1454" height="834" alt="Image" src="https://github.com/user-attachments/assets/969ca038-f266-42bc-8869-b1808b369ff5" />
+
+
+## 설치 및 설정
+
+### 1. Python 패키지 설치
+
+```bash
+# pyproject.toml 기반 설치
+pip install -e .
+
+# 또는 requirements.txt 사용
+pip install -r requirements.txt
+```
+
+### 2. 환경 변수 설정
+
+`.env.example` 파일을 복사하여 `.env` 파일을 생성하고 필요한 API 키를 입력하세요.
+
+```bash
+cp .env.example .env
+```
+
+필수 환경 변수:
+- `UPSTAGE_API_KEY`: Upstage Solar LLM API 키
+- `DART_API_KEY`: 금융감독원 DART API 키
+- `NAVER_CLIENT_ID`: 네이버 뉴스 검색 API 클라이언트 ID
+- `NAVER_CLIENT_SECRET`: 네이버 뉴스 검색 API 시크릿
+- `DATABASE_URL`: PostgreSQL 연결 문자열
+
+### 3. Firebase Admin SDK 설정
+
+`secrets/` 폴더를 생성하고 Firebase Admin SDK JSON 키 파일을 넣어주세요.
+
+```bash
+mkdir secrets
+# Firebase Console에서 다운로드한 서비스 계정 키를 secrets/ 폴더에 복사
+cp /path/to/your-firebase-adminsdk.json secrets/
+```
+
+### 4. 데이터베이스 설정
+
+PostgreSQL 데이터베이스를 준비하고 마이그레이션을 실행하세요.
+
+```bash
+# Docker로 PostgreSQL 실행 (선택사항)
+docker-compose up -d
+
+# 마이그레이션 실행
+alembic upgrade head
+```
+
+### 5. 서버 실행
+
+```bash
+# 개발 서버
+uvicorn main:app --reload
+
+# 또는 start.sh 사용 (Linux/Mac)
+./start.sh
+```
+
+## API 키 발급 안내
+
+- **Upstage Solar API**: https://console.upstage.ai/
+- **DART API**: https://opendart.fss.or.kr/
+- **네이버 검색 API**: https://developers.naver.com/
+- **Firebase**: https://console.firebase.google.com/
