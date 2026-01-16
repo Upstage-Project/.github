@@ -1,12 +1,66 @@
-## Hi there 👋
+# [FinMate] 초보 투자자를 위한 AI 기반 투자 도우미
 
-<!--
+> "삼성전자 요즘 많이 올랐는데 사도 괜찮으려나" 
+> 초보 투자자의 고민에 대해 뉴스, 재무제표를 분석하고 인사이트를 제공하는 AI 에이전트 서비스입니다.
 
-**Here are some ideas to get you started:**
+---
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+## 팀원 소개
+
+| 이름 | 역할 | GitHub |
+|------|------|--------|
+| **[김남호]** | AI Agent Logic (LangGraph) | 
+| **[신재호]** | AI Agent Logic (LangGraph) | 
+| **[안동우]** | Frontend, UI/UX Design| 
+| **[장성우]** | Backend, Docker | 
+| **[최형윤]** | Backend, DataBase | 
+
+## 프로젝트 개요
+
+초보 투자자들이 직면하는 '정보의 과잉'과 '분석의 어려움'을 해결하기 위해 기획되었습니다. 사용자가 특정 종목에 대해 질문하면, AI 에이전트가 실시간 데이터를 수집하고 전설적인 투자자들의 철학을 투영하여 입체적인 분석 결과를 제공합니다.
+
+### 주요 기능
+- **🔍 실시간 정보 수집**: 뉴스 및 최신 재무제표 데이터를 에이전트가 자동 탐색
+- **🧠 듀얼 페르소나 분석**: 가치 투자의 대가 '워렌 버핏'과 성장주 투자의 대가 '피터 린치'의 상반된 관점 제공
+- **⚠️ 리스크 평가**: 단순 추천이 아닌 데이터 기반의 잠재적 리스크 분석
+- **💬 인터랙티브 리포트**: 복잡한 지표를 사용자 눈높이에 맞춘 대화형 인터페이스로 제공
+
+## 기술 스택
+
+### Backend
+- **Python 3.11+**
+- **FastAPI**
+- **LangGraph** (Multi-Agent Orchestration)
+
+### Frontend
+- **React (Vite)**
+- **Tailwind CSS**
+- **Figma** (UI/UX Design)
+
+### AI/ML
+- **Upstage Solar LLM** / **GPT-4o**
+- **LangChain**
+- **ChromaDB** (Vector Database)
+
+### Infrastructure
+- **Docker**
+- **Kubernetes (k3s)**
+- **AWS EC2**
+
+## 아키텍처
+
+저희 서비스는 `Orchestrator`를 중심으로 한 **Multi-Agent** 구조로 설계되었습니다.
+
+```mermaid
+graph TD
+    A[User Question] --> B[Orchestrator]
+    B --> C[InfoCollectorAgent]
+    C --> D[InfoAnalysisAgent]
+    D --> E[AnswerGenAgent]
+    E --> B
+    B --> F[Final User Response]
+    
+    subgraph "Analysis Perspective"
+    D1[Warren Buffett Style]
+    D2[Peter Lynch Style]
+    end
