@@ -46,6 +46,36 @@
 - **Kubernetes (k3s)**
 - **AWS EC2**
 
+## 프로젝트 구조
+FinMate - Upstage_Project/
+├── backend/
+│       |
+|      app/
+│       ├── agents/              # AI 에이전트 로직
+│       │   └── subgraphs/      # 에이전트 서브그래프
+│       ├── api/                # API 라우터
+│       │   └── route/          # API 엔드포인트
+│       ├── core/               # 핵심 설정 (DB, LLM, Logger 등)
+│       ├── models/             # 데이터 모델
+│       │   ├── entities/       # 도메인 엔티티
+│       │   └── schemas/        # API 스키마 (Pydantic)
+│       ├── repository/         # 데이터 액세스 계층
+│       │   ├── client/         # 외부 클라이언트
+│       │   └── vector/         # 벡터 DB 레포지토리
+│       └── service/            # 비즈니스 로직
+│           └── agents/         # 에이전트별 서비스
+|
+|
+└── frontend/ 
+       |
+      src/
+       ├── api/               # API 
+       ├── components/        # 버튼, 입력창같은 작은 컴포넌트
+       └── pages/             # 화면단위의 페이지
+             
+
+
+
 ## 아키텍처
 
 저희 서비스는 `Orchestrator`를 중심으로 한 **Multi-Agent** 구조로 설계되었습니다.
