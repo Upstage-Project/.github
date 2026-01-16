@@ -47,6 +47,7 @@
 - **AWS EC2**
 
 ## 프로젝트 구조
+```
 FinMate - Upstage_Project/
 ├── backend/
 │       |
@@ -72,16 +73,8 @@ FinMate - Upstage_Project/
        ├── api/               # API 
        ├── components/        # 버튼, 입력창같은 작은 컴포넌트
        └── pages/             # 화면단위의 페이지
-             │   │   │   └── search_client.py # Search/web client
-│   │   └── vector/              # Vector database layer
-│   │       └── vector_repo.py   # ChromaDB repository
-│   │
-│   ├── service/                  # Business logic layer
-│   │   ├── agent_service.py      # Main orchestration service
-│   │   ├── embedding_service.py  # Embedding generation
-│   │   ├── vector_service.py     # Vector DB operations
-│   │   └── agents/              # Agent-specific services
-│
+```
+
 
 
 
