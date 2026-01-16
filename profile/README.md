@@ -51,7 +51,7 @@
 FinMate - Upstage_Project/
 ├── backend/
 │       |
-|      app/
+│      app/
 │       ├── agents/              # AI 에이전트 로직
 │       │   └── subgraphs/      # 에이전트 서브그래프
 │       ├── api/                # API 라우터
@@ -65,8 +65,7 @@ FinMate - Upstage_Project/
 │       │   └── vector/         # 벡터 DB 레포지토리
 │       └── service/            # 비즈니스 로직
 │           └── agents/         # 에이전트별 서비스
-|
-|
+│
 └── frontend/ 
        |
       src/
