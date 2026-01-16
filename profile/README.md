@@ -1,6 +1,6 @@
 # [FinMate] 초보 투자자를 위한 AI 기반 투자 도우미
 
-> "삼성전자 요즘 많이 올랐는데 사도 괜찮으려나" 
+> "삼성전자 요즘 많이 올랐는데 사도 괜찮으려나"
 > 초보 투자자의 고민에 대해 뉴스, 재무제표를 분석하고 인사이트를 제공하는 AI 에이전트 서비스입니다.
 
 ---
@@ -9,11 +9,11 @@
 
 | 이름 | 역할 | GitHub |
 |------|------|--------|
-| **[김남호]** | AI Agent Logic (LangGraph) | 
-| **[신재호]** | AI Agent Logic (LangGraph) | 
-| **[안동우]** | Frontend, UI/UX Design| 
-| **[장성우]** | Backend, Docker | 
-| **[최형윤]** | Backend, DataBase | 
+| **[김남호]** | AI Agent Logic (LangGraph) | [@namho](https://github.com/namho1029) |
+| **[신재호]** | AI Agent Logic (LangGraph) | [sjho0210](https://github.com/sjho0210) |
+| **[안동우]** | Frontend, UI/UX Design| [DongwooAn00](https://github.com/DongwooAn00) |
+| **[장성우]** | Backend, Docker | [woo1016](https://github.com/woo1016) |
+| **[최형윤]** | Backend, DataBase | [kestrel01360](https://github.com/kestrel01360) |
 
 ## 프로젝트 개요
 
@@ -21,24 +21,22 @@
 
 ### 주요 기능
 - **🔍 실시간 정보 수집**: 뉴스 및 최신 재무제표 데이터를 에이전트가 자동 탐색
-- **🧠 듀얼 페르소나 분석**: 가치 투자의 대가 '워렌 버핏'과 성장주 투자의 대가 '피터 린치'의 상반된 관점 제공
 - **⚠️ 리스크 평가**: 단순 추천이 아닌 데이터 기반의 잠재적 리스크 분석
 - **💬 인터랙티브 리포트**: 복잡한 지표를 사용자 눈높이에 맞춘 대화형 인터페이스로 제공
 
 ## 기술 스택
 
 ### Backend
-- **Python 3.11+**
+- **Python 3.12+**
 - **FastAPI**
 - **LangGraph** (Multi-Agent Orchestration)
 
 ### Frontend
 - **React (Vite)**
-- **Tailwind CSS**
 - **Figma** (UI/UX Design)
 
 ### AI/ML
-- **Upstage Solar LLM** / **GPT-4o**
+- **Upstage Solar LLM**
 - **LangChain**
 - **ChromaDB** (Vector Database)
 
@@ -50,17 +48,3 @@
 ## 아키텍처
 
 저희 서비스는 `Orchestrator`를 중심으로 한 **Multi-Agent** 구조로 설계되었습니다.
-
-```mermaid
-graph TD
-    A[User Question] --> B[Orchestrator]
-    B --> C[InfoCollectorAgent]
-    C --> D[InfoAnalysisAgent]
-    D --> E[AnswerGenAgent]
-    E --> B
-    B --> F[Final User Response]
-    
-    subgraph "Analysis Perspective"
-    D1[Warren Buffett Style]
-    D2[Peter Lynch Style]
-    end
